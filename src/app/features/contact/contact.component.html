@@ -1,0 +1,74 @@
+<section>
+  <h2 class="page-title">Contact</h2>
+  <p class="page-intro">
+    Open to senior full-stack roles in banking, fintech, or platform engineering. Drop a line below,
+    or grab my socials directly.
+  </p>
+
+  <div class="contact-grid">
+    <div class="direct-links">
+      @for (link of contactLinks; track link.position) {
+        @if (link.external) {
+          <a [href]="link.href" class="direct-link" target="_blank" rel="noopener noreferrer">
+            <span class="link-num" aria-hidden="true">{{ link.position }} →</span>
+            <span>{{ link.label }}</span>
+          </a>
+        } @else {
+          <a [href]="link.href" class="direct-link">
+            <span class="link-num" aria-hidden="true">{{ link.position }} →</span>
+            <span>{{ link.label }}</span>
+          </a>
+        }
+      }
+    </div>
+
+    <div>
+      <div class="section-label" aria-hidden="true">▸ LEAVE A MESSAGE</div>
+      <form class="contact-card" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+        <mat-form-field appearance="fill">
+          <mat-label>Your name</mat-label>
+          <input matInput formControlName="name" autocomplete="name" />
+          @if (form.controls.name.touched && form.controls.name.invalid) {
+            <mat-error>Please enter your name.</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Email (optional)</mat-label>
+          <input matInput type="email" formControlName="email" autocomplete="email" />
+          @if (form.controls.email.touched && form.controls.email.invalid) {
+            <mat-error>Please enter a valid email.</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Say hi, share a role, or just ping me.</mat-label>
+          <textarea matInput rows="4" formControlName="message"></textarea>
+          @if (form.controls.message.touched && form.controls.message.invalid) {
+            <mat-error>Message should be at least 10 characters.</mat-error>
+          }
+        </mat-form-field>
+
+        <div class="contact-actions">
+          <div class="color-picker" role="radiogroup" aria-label="Accent">
+            @for (s of swatches; track s) {
+              <button
+                type="button"
+                class="color-swatch"
+                [class]="'swatch-' + s"
+                [class.active]="activeSwatch() === s"
+                (click)="selectSwatch(s)"
+                [attr.aria-label]="s"
+                [attr.aria-checked]="activeSwatch() === s"
+                role="radio"
+              ></button>
+            }
+          </div>
+          <button type="submit" mat-flat-button color="primary" class="send-btn">Send</button>
+        </div>
+
+        <div class="contact-private" aria-hidden="true">PRIVATE TO MR KN.</div>
+      </form>
+    </div>
+  </div>
+</section>

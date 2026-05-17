@@ -1,0 +1,29 @@
+<article class="era-card">
+  <div class="era-card-header">
+    <div class="era-date">{{ date() }}</div>
+    <div class="era-icon-box" [class]="iconColor()">
+      <app-icon [name]="iconKey()" [size]="32" />
+    </div>
+  </div>
+
+  <h3 class="era-title">{{ title() }}</h3>
+  <p class="era-desc">{{ description() }}</p>
+
+  <div class="pill-tags">
+    @for (tag of tags(); track tag) {
+      <span class="pill-tag">{{ tag }}</span>
+    }
+  </div>
+
+  @if (footerItems().length > 0) {
+    <div class="era-divider" aria-hidden="true"></div>
+    <div class="era-footer">
+      @for (item of footerItems(); track item; let last = $last) {
+        <span>{{ item }}</span>
+        @if (!last) {
+          <span class="dot" aria-hidden="true">·</span>
+        }
+      }
+    </div>
+  }
+</article>

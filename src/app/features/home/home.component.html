@@ -1,0 +1,37 @@
+<section class="hero">
+  <h1>
+    I build <span class="accent">banking-grade</span> software — from messy requirements to running
+    production.
+  </h1>
+
+  <p class="hero-sub">
+    Senior full-stack engineer with a decade across investment banking, public-sector transit, and
+    enterprise tooling. Angular and .NET on the daily, Kubernetes and Control-M underneath.
+  </p>
+
+  <app-character />
+
+  <div class="section-label" aria-hidden="true">▸ AT A GLANCE</div>
+
+  <div class="stats-row">
+    @for (stat of stats; track stat.label) {
+      <div class="stat-card">
+        <div class="stat-number">
+          {{ stat.value }}@if (stat.suffix) {
+            <span>{{ stat.suffix }}</span>
+          }
+        </div>
+        <div class="stat-text">{{ stat.label }}</div>
+      </div>
+    }
+  </div>
+
+  <div class="cta-row">
+    <a routerLink="/story" mat-flat-button color="primary" class="cta-btn">
+      Read My Story →
+    </a>
+    <a routerLink="/capabilities" mat-stroked-button class="cta-btn">
+      See Capabilities
+    </a>
+  </div>
+</section>

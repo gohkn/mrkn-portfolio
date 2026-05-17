@@ -1,0 +1,46 @@
+# Dependencies
+node_modules
+npm-debug.log*
+
+# Build output
+dist
+.angular/cache
+coverage
+/tmp
+/out-tsc
+
+# Git
+.git
+.gitignore
+.gitattributes
+.github
+
+# Editors / OS
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Environment / secrets — never bake these into the image
+.env
+.env.*
+*.pem
+*.key
+*.crt
+
+# Docs / CI noise (not needed at build time)
+README.md
+SETUP.md
+docs
+
+# Test artefacts
+*.log
+.nyc_output
+karma.conf.js
+
+# Docker files themselves
+Dockerfile
+docker-compose*.yml
+.dockerignore

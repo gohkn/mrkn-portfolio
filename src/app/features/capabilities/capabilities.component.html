@@ -1,0 +1,17 @@
+<section>
+  <h2 class="page-title">Capabilities</h2>
+  <p class="page-intro">The work I do most days, grouped by where it sits in the stack.</p>
+
+  <div class="era-section">
+    @for (cap of capabilities; track cap.label) {
+      <app-era-card
+        [date]="cap.label"
+        [iconColor]="cap.iconColor"
+        [iconKey]="cap.iconKey"
+        [title]="cap.title"
+        [description]="cap.description"
+        [tags]="cap.tags"
+      />
+    }
+  </div>
+</section>

@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  padding-top: 20px;
+}
+
+.page-intro .link {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--ink);
+  font-weight: 600;
+}
+
+.arrow-up {
+  color: var(--accent);
+  font-weight: 700;
+  display: inline-block;
+}
+
+.era-section {
+  margin-bottom: 80px;
+}

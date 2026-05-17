@@ -1,0 +1,34 @@
+# Local Docker testing for the Mr KN Portfolio.
+# Usage:
+#   docker compose up --build
+# Then open http://localhost:8080
+
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mr-kn-portfolio:local
+    container_name: mr-kn-portfolio
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+    # Security hardening at runtime
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /var/cache/nginx:size=32m
+      - /var/run:size=4m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    # nginx needs no extra capabilities on port 8080 (unprivileged)
+
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:8080/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

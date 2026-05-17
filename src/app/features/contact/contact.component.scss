@@ -1,0 +1,133 @@
+:host {
+  display: block;
+  padding-top: 20px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 50px;
+  align-items: start;
+  margin-bottom: 80px;
+}
+
+.direct-links {
+  background: var(--card);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.03);
+}
+
+.direct-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--tag-border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition:
+    padding-left 0.2s,
+    color 0.2s;
+
+  &:last-child {
+    border-bottom: none;
+  }
+  &:hover {
+    padding-left: 12px;
+    color: var(--accent-deep);
+  }
+
+  .link-num {
+    opacity: 0.4;
+  }
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 28px;
+  padding: 28px;
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.color-picker {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.color-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.15s;
+  padding: 0;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  &.active {
+    border-color: var(--ink);
+  }
+
+  &.swatch-white {
+    background: #fff;
+    border: 1.5px solid var(--ink);
+  }
+  &.swatch-purple {
+    background: #b8a8d8;
+  }
+  &.swatch-orange {
+    background: #f0a060;
+  }
+  &.swatch-cyan {
+    background: var(--accent);
+  }
+  &.swatch-green {
+    background: #7cc88c;
+  }
+  &.swatch-grey {
+    background: #c0bcb0;
+  }
+}
+
+.send-btn {
+  border-radius: 100px !important;
+  padding: 8px 36px !important;
+  height: 48px !important;
+  font-weight: 600 !important;
+}
+
+.contact-private {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 14px;
+}
+
+@media (max-width: 800px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
