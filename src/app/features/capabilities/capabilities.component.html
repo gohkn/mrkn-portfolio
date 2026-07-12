@@ -4,14 +4,31 @@
 
   <div class="era-section">
     @for (cap of capabilities; track cap.label) {
-      <app-era-card
-        [date]="cap.label"
-        [iconColor]="cap.iconColor"
-        [iconKey]="cap.iconKey"
-        [title]="cap.title"
-        [description]="cap.description"
-        [tags]="cap.tags"
-      />
+    <app-era-card
+      [date]="cap.label"
+      [iconColor]="cap.iconColor"
+      [iconKey]="cap.iconKey"
+      [title]="cap.title"
+      [description]="cap.description"
+      [tags]="cap.tags"
+></app-era-card>
     }
   </div>
+    <h2 class="page-title">Certifications</h2>
+    <p class="page-intro">Credentials earned outside the day job.</p>
+    
+    <div class="cert-grid">
+    @for (cert of certifications; track cert.name) {
+    <a class="cert-card" [href]="cert.credentialUrl" target="_blank" rel="noopener noreferrer">
+    <div class="cert-icon-box" [class]="cert.iconColor">
+    <app-icon [name]="cert.iconKey" [size]="24"></app-icon>
+    </div>
+    <div class="cert-body">
+    <div class="cert-name">{{ cert.name }}</div>
+    <div class="cert-meta">{{ cert.issuer }} · {{ cert.date }}</div>
+    </div>
+    <span class="cert-link">View credential →</span>
+    </a>
+    }
+    </div></app-era-card>
 </section>
