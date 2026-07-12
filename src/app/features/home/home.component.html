@@ -17,7 +17,8 @@
     @for (stat of stats; track stat.label) {
       <div class="stat-card">
         <div class="stat-number">
-          {{ stat.value }}@if (stat.suffix) {
+          {{ stat.value }}
+          @if (stat.suffix) {
             <span>{{ stat.suffix }}</span>
           }
         </div>
@@ -27,11 +28,7 @@
   </div>
 
   <div class="cta-row">
-    <a routerLink="/story" mat-flat-button color="primary" class="cta-btn">
-      Read My Story →
-    </a>
-    <a routerLink="/capabilities" mat-stroked-button class="cta-btn">
-      See Capabilities
-    </a>
+    <a routerLink="/story" mat-flat-button color="primary" class="cta-btn"> Read My Story → </a>
+    <a routerLink="/capabilities" mat-stroked-button class="cta-btn"> See Capabilities </a>
   </div>
 </section>
