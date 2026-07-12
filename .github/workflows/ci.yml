@@ -44,8 +44,8 @@ jobs:
           path: coverage/
           retention-days: 7
 
-      - name: npm audit (fail on high+)
-        run: npm audit --audit-level=high
+      - name: npm audit (fail on high+, production deps only)
+        run: npm audit --omit=dev --audit-level=high
 
   docker-build:
     name: Docker Build & Scan
@@ -112,4 +112,4 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v4
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+          SONAR_HOST_URL

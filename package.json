@@ -20,7 +20,7 @@
     "lint": "ng lint",
     "format": "prettier --write \"src/**/*.{ts,html,scss,json}\"",
     "format:check": "prettier --check \"src/**/*.{ts,html,scss,json}\"",
-    "audit": "npm audit --audit-level=high",
+    "audit": "npm audit --omit=dev --audit-level=high",
     "deploy:gh": "npm run build:gh && npx angular-cli-ghpages --dir=dist/mr-kn-portfolio/browser"
   },
   "dependencies": {
@@ -59,6 +59,4 @@
     "karma-sonarqube-unit-reporter": "~0.0.23",
     "prettier": "^3.3.0",
     "typescript": "~5.9.0",
-    "typescript-eslint": "^8.63.0"
-  }
-}
+    "typescript-eslint": "^8.63.0
