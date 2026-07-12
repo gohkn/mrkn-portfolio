@@ -12,7 +12,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:gh": "ng build --configuration production --base-href /mr-kn-portfolio/",
+    "build:gh": "ng build --configuration production --base-href /mrkn-portfolio/",
     "build:docker": "ng build --configuration production --base-href /",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
