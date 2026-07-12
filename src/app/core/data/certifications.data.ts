@@ -47,3 +47,4 @@ export const CERTIFICATIONS: readonly Certification[] = [
       'https://www.credly.com/badges/8ee9744c-7499-429f-9186-f4cce90d77e9/linked_in_profile',
   },
   ] as const;
+] as const;
