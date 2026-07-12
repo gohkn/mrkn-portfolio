@@ -68,14 +68,7 @@ export const ERAS: readonly Era[] = [
     title: 'Personal Builds',
     description:
       "Where I learn the things that don't fit at work. A Python stock screener for Bursa Malaysia with multi-factor value scoring, auto-portfolio builder, and CSV export. A reusable Angular testing skill packaged for SonarQube-compatible coverage in TFS pipelines. Built for me, useful enough to share.",
-    tags: [
-      'Python',
-      'Pandas',
-      'Yahoo Finance API',
-      'Karma / Jasmine',
-      'SonarQube',
-      'PowerShell',
-    ],
+    tags: ['Python', 'Pandas', 'Yahoo Finance API', 'Karma / Jasmine', 'SonarQube', 'PowerShell'],
     footerItems: ['Bursa Stock Screener', 'Angular Test Skill', 'Investing Tools'],
   },
 ] as const;

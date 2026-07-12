@@ -16,16 +16,10 @@ import { IconKey } from '../models/era.model';
 export class IconRegistryService {
   private readonly icons: Readonly<Record<IconKey, string[]>> = {
     code: ['M16 18l6-6-6-6', 'M8 6l-6 6 6 6'],
-    grid: [
-      'M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z',
-    ],
+    grid: ['M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z'],
     cloud: ['M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z'],
     chart: ['M3 3v18h18', 'm19 9-5 5-4-4-3 3'],
-    monitor: [
-      'M2 3h20v14H2z',
-      'M8 21h8',
-      'M12 17v4',
-    ],
+    monitor: ['M2 3h20v14H2z', 'M8 21h8', 'M12 17v4'],
     database: [
       'M12 2c4.97 0 9 1.34 9 3v14c0 1.66-4.03 3-9 3s-9-1.34-9-3V5c0-1.66 4.03-3 9-3z',
       'M3 5c0 1.66 4.03 3 9 3s9-1.34 9-3',

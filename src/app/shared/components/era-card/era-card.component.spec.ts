@@ -11,7 +11,9 @@ describe('EraCardComponent', () => {
     }).compileComponents();
   });
 
-  function setRequiredInputs(fixture: ReturnType<typeof TestBed.createComponent<EraCardComponent>>): void {
+  function setRequiredInputs(
+    fixture: ReturnType<typeof TestBed.createComponent<EraCardComponent>>
+  ): void {
     fixture.componentRef.setInput('date', '2020 – 2022');
     fixture.componentRef.setInput('iconColor', 'cyan');
     fixture.componentRef.setInput('iconKey', 'code');

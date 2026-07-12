@@ -9,11 +9,7 @@ describe('HomeComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [HomeComponent],
-      providers: [
-        provideZonelessChangeDetection(),
-        provideRouter([]),
-        provideAnimationsAsync(),
-      ],
+      providers: [provideZonelessChangeDetection(), provideRouter([]), provideAnimationsAsync()],
     }).compileComponents();
   });
 
@@ -26,7 +22,7 @@ describe('HomeComponent', () => {
     const fixture = TestBed.createComponent(HomeComponent);
     fixture.detectChanges();
     const h1 = (fixture.nativeElement as HTMLElement).querySelector('h1');
-    expect(h1?.textContent).toContain('resilient');
+    expect(h1?.textContent).toContain('banking-grade');
   });
 
   it('should render one card per stat', () => {
