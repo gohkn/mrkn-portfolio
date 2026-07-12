@@ -43,7 +43,15 @@
                 }
               ],
               "outputHashing": "all",
-              "sourceMap": false
+              "sourceMap": false,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              }
             },
             "development": {
               "optimization": false,
@@ -72,15 +80,4 @@
           }
         },
         "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
-          }
-        }
-      }
-    }
-  },
-  "cli": {
-    "analytics": "9f4e9854-fc96-4854-b3a6-35afa96ab3f6"
-  }
-}
+          "builder": "@a
