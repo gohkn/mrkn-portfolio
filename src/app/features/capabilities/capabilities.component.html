@@ -4,13 +4,13 @@
 
   <div class="era-section">
     @for (cap of capabilities; track cap.label) {
-    <app-era-card
-      [date]="cap.label"
-      [iconColor]="cap.iconColor"
-      [iconKey]="cap.iconKey"
-      [title]="cap.title"
-      [description]="cap.description"
-      [tags]="cap.tags"
+      <app-era-card
+        [date]="cap.label"
+        [iconColor]="cap.iconColor"
+        [iconKey]="cap.iconKey"
+        [title]="cap.title"
+        [description]="cap.description"
+        [tags]="cap.tags"
       ></app-era-card>
     }
   </div>
@@ -29,7 +29,7 @@
           <div class="cert-meta">{{ cert.issuer }} · {{ cert.date }}</div>
         </div>
         <span class="cert-link">View credential →</span>
-    </a>
+      </a>
     }
   </div>
 </section>
