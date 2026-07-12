@@ -34,6 +34,15 @@ export interface Capability {
   readonly tags: readonly string[];
 }
 
+export interface Certification {
+  readonly name: string;
+  readonly issuer: string;
+  readonly date: string;
+  readonly iconColor: EraIconColor;
+  readonly iconKey: IconKey;
+  readonly credentialUrl: string;
+}
+
 export interface ContactLink {
   readonly position: string;
   readonly label: string;
