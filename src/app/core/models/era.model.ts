@@ -1,19 +1,19 @@
 /**
- * Era / capability shared type definitions.
- * `IconKey` is a closed string union so templates can't introduce invalid icons.
- */
+* Era / capability shared type definitions.
+* `IconKey` is a closed string union so templates can't introduce invalid icons.
+*/
 
 export type EraIconColor = 'cyan' | 'green' | 'orange' | 'purple' | 'pink';
 
 export type IconKey =
   | 'code'
-  | 'grid'
-  | 'cloud'
-  | 'chart'
-  | 'monitor'
-  | 'database'
-  | 'settings'
-  | 'shield';
+| 'grid'
+| 'cloud'
+| 'chart'
+| 'monitor'
+| 'database'
+| 'settings'
+| 'shield';
 
 export interface Era {
   readonly date: string;
@@ -32,6 +32,15 @@ export interface Capability {
   readonly title: string;
   readonly description: string;
   readonly tags: readonly string[];
+}
+
+export interface Certification {
+  readonly name: string;
+  readonly issuer: string;
+  readonly date: string;
+  readonly iconColor: EraIconColor;
+  readonly iconKey: IconKey;
+  readonly credentialUrl: string;
 }
 
 export interface ContactLink {
