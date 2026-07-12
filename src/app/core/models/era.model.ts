@@ -1,6 +1,6 @@
 /**
-* Era / capability shared type definitions.
-* `IconKey` is a closed string union so templates can't introduce invalid icons.
+ * Era / capability shared type definitions.
+ * `IconKey` is a closed string union so templates can't introduce invalid icons.
  */
 
 export type EraIconColor = 'cyan' | 'green' | 'orange' | 'purple' | 'pink';
